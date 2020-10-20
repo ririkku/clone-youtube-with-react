@@ -31,3 +31,12 @@ export const fetchSelectedDate = async id => {
     }
   }); 
 }
+
+export const fetchRelatedData = async id => {
+  return youtube.get('/search', {
+    params: {
+      ...params,
+      relatedToVideoId: id
+    }
+  })
+}
