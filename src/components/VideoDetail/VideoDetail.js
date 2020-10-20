@@ -2,6 +2,7 @@ import React, {useEffect, useContext} from 'react'
 import {useLocation} from 'react-router-dom'
 import { fetchSelectedDate } from '../../apis'
 import {Store} from '../../stores/index'
+import VideoPlay from '../VideoPlay/VideoPlay'
 
 const VideoDetail = () => {
   
@@ -24,7 +25,7 @@ const VideoDetail = () => {
 
   return (
     <div>
-      
+      <VideoPlay id={globalState.selected.id} />
     </div>
   )
 }
