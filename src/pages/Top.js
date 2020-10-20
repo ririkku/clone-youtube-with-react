@@ -11,7 +11,6 @@ const Top = () => {
 
   useEffect(() => {
     fetchPopularDate().then(res => {
-      console.log(res);
       setGlobalState({type: 'SET_POPULAR', payload: {popular: res.data.items}})
     })
   }, [])
