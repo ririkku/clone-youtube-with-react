@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {StoreProvider} from './stores/index'
+import 'normalize.css'
 
 ReactDOM.render(
   <React.StrictMode>

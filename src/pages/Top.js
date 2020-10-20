@@ -2,6 +2,8 @@ import React, {useEffect, useContext} from 'react'
 import Layout from '../components/Layout/Layout'
 import {fetchPopularDate} from '../apis/index'
 import {Store} from '../stores/index'
+import VideoGrid from '../components/VideoGrid/VideoGrid'
+import VideoGridItem from '../components/VideoGridItem/VideoGridItem'
 
 const Top = () => {
 
@@ -16,7 +18,20 @@ const Top = () => {
 
   return (
     <Layout>
-      top page      
+      <VideoGrid>
+        {
+          globalState.popular && globalState.popular.map((popular, index) => {
+            return (
+              <VideoGridItem 
+                key={index}
+                id={popular.id}
+                src={popular.snippet.thumbnails.standard.url}
+                title={popular.snippet.title} />
+            )
+          })
+        }
+      </VideoGrid>
+            
     </Layout>
   )
 }
