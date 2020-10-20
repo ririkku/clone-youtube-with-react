@@ -33,10 +33,19 @@ export const fetchSelectedDate = async id => {
 }
 
 export const fetchRelatedData = async id => {
-  return youtube.get('/search', {
+  return await youtube.get('/search', {
     params: {
       ...params,
       relatedToVideoId: id
+    }
+  })
+}
+
+export const fetchSearchDate = async query => {
+  return await youtube.get('/search', {
+    params: {
+      ...params,
+      q: query 
     }
   })
 }
