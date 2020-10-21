@@ -1,2 +1,2 @@
 ### `確認方法`
-`yarn start` するだけ
+`yarn install` と `yarn start` するだけ
